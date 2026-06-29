@@ -1,0 +1,50 @@
+٥<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بوابة الفخر</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- صندوق تسجيل الدخول -->
+    <div class="gateway-container" id="loginSection">
+        <div class="login-box">
+            <h1 class="glow-text">بوابة الفخر..</h1>
+            <h2>للدخول، ادخلي كلمة السر</h2>
+            <input type="password" id="passwordField" placeholder="••••">
+            <button onclick="checkPassword()">دخول</button>
+            <p id="errorMessage" class="error-msg"></p>
+        </div>
+    </div>
+
+    <!-- المحتوى السري (مخفي افتراضياً) -->
+    <div class="secret-content" id="secretSection" style="display: none;">
+        <div class="content-card">
+            <h1>أهلاً بمهندستي 🎓</h1>
+            <hr class="elegant-line">
+            
+            <p class="love-letter">
+                من أول يوم شفتك فيه، وأنا بعرف إنك شخص استثنائي.<br>
+                شفتك وإنتِ بتسهري، بتتعبي، وبتحاربي عشان حلمك..<br>
+                اليوم أنتِ مش بس تخرجتي كمهندسة، أنتِ بنيتي أساس متين لنجاحك، وبنيتي مكانة ما حد بيقدر ياخدها بقلبي.<br><br>
+                أنا فخور فيكِ قد الدنيا، ومتحمس أشوف كل احلامك بتتحقق والنجاحات اللي رح تبنيها في  المستقبل واكون معك فيها خطوة بخطوة.<br>
+                دائماً معك، وفي ظهرك.
+            </p>
+
+            <!-- مكان لصوركم (اختياري) -->
+            <div class="photo-gallery">
+                <!-- ضعي أسماء صوركم الحقيقية هنا بدل photo1 و photo2 -->
+                <div class="photo-frame"><img src="photo1.jpg" alt="صورة 1"></div>
+                <div class="photo-frame"><img src="photo2.jpg" alt="صورة 2"></div>
+            </div>
+
+            <p class="signature">بحبك، ودائماً فخور فيكِ ❤️</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

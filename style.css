@@ -1,0 +1,182 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Tajawal', sans-serif;
+    
+    /* هنا نضع اسم الصورة التي حفظتها */
+    background-image: url('logo.png'); 
+    
+    /* هذه الأكواد تضمن أن الصورة تغطي الشاشة بالكامل وبشكل أنيق */
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    
+    background-color: #1a1a1a; /* لون احتياطي في حال تأخر تحميل الصورة */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* الصندوق الذي يحتوي على كلمة السر */
+.login-box {
+    background: rgba(30, 30, 30, 0.75); /* خلفية داكنة شفافة */
+    border: 1px solid #c5a059; /* إطار ذهبي رفيع */
+    border-radius: 12px;
+    padding: 50px 40px;
+    text-align: center;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.8), 0 0 15px rgba(197, 160, 89, 0.2); /* ظل غامق مع توهج ذهبي خفيف */
+    backdrop-filter: blur(8px); /* تأثير التغبيش الزجاجي للخلفية */
+    width: 300px;
+}
+
+/* تأثير التوهج للعنوان */
+.glow-text {
+    color: #f0c966;
+    font-size: 2.2em;
+    margin-bottom: 10px;
+    text-shadow: 0 0 10px rgba(240, 201, 102, 0.6);
+}
+
+h2 {
+    color: #cccccc;
+    font-size: 1.1em;
+    font-weight: normal;
+    margin-bottom: 30px;
+}
+
+/* حقل إدخال كلمة السر */
+input[type="password"] {
+    width: 80%;
+    padding: 12px;
+    margin-bottom: 25px;
+    background: rgba(0, 0, 0, 0.6);
+    border: 1px solid #555;
+    border-radius: 20px;
+    color: #fff;
+    text-align: center;
+    font-size: 1.5em;
+    letter-spacing: 5px; /* تباعد بين نقاط كلمة السر */
+    transition: 0.3s;
+}
+
+/* تأثير عند الضغط على حقل الإدخال */
+input[type="password"]:focus {
+    outline: none;
+    border-color: #f0c966;
+    box-shadow: 0 0 10px rgba(240, 201, 102, 0.4);
+}
+
+/* زر الدخول */
+button {
+    background: linear-gradient(135deg, #c5a059, #f0c966); /* تدرج ذهبي */
+    border: none;
+    padding: 12px 35px;
+    border-radius: 25px;
+    color: #111;
+    font-family: 'Tajawal', sans-serif;
+    font-weight: bold;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(240, 201, 102, 0.7);
+}
+
+.error-msg {
+    color: #ff4c4c;
+    margin-top: 15px;
+    font-size: 0.9em;
+    display: none;
+}
+
+/* تنسيق قسم المحتوى السري */
+.secret-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+    /* تأثير الظهور التدريجي */
+    animation: fadeIn 1.5s ease-in-out; 
+}
+
+/* بطاقة الرسالة */
+.content-card {
+    background: rgba(20, 20, 20, 0.85); /* خلفية داكنة جداً لتوضيح الكلام */
+    border: 1px solid #c5a059;
+    border-radius: 15px;
+    padding: 50px;
+    max-width: 800px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.9);
+}
+
+.content-card h1 {
+    color: #f0c966;
+    margin-bottom: 10px;
+    font-size: 2.5em;
+}
+
+.elegant-line {
+    border: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #c5a059, transparent);
+    margin: 20px 0 40px 0;
+}
+
+.love-letter {
+    color: #e0e0e0;
+    font-size: 1.3em;
+    line-height: 2;
+    text-align: right; /* محاذاة النص لليمين لجمالية اللغة العربية */
+    margin-bottom: 40px;
+}
+
+/* تنسيق إطارات الصور */
+.photo-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.photo-frame {
+    width: 200px;
+    height: 200px;
+    border: 2px solid #c5a059;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    transition: transform 0.3s;
+}
+
+.photo-frame:hover {
+    transform: scale(1.05); /* تكبير بسيط عند مرور الماوس */
+}
+
+.photo-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.signature {
+    color: #f0c966;
+    font-size: 1.5em;
+    font-style: italic;
+    margin-top: 30px;
+}
+
+/* حركة الظهور التدريجي */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
