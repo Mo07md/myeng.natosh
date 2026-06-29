@@ -45,28 +45,33 @@ h2 {
     margin-bottom: 30px;
 }
 
-/* حقل إدخال كلمة السر */
-input[type="password"] {
-    width: 80%;
-    padding: 12px;
-    margin-bottom: 25px;
-    background: rgba(0, 0, 0, 0.6);
-    border: 1px solid #555;
-    border-radius: 20px;
-    color: #fff;
+/* تنسيق قسم المحتوى السري */
+.secret-content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* غيرنا هاي عشان ما يطير الكلام لفوق */
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+    animation: fadeIn 1.5s ease-in-out; 
+    overflow-y: auto; /* عشان يسمحلك تنزل وتطلع (سكرول) براحتك */
+}
+
+/* بطاقة الرسالة */
+.content-card {
+    background: rgba(20, 20, 20, 0.85); 
+    border: 1px solid #c5a059;
+    border-radius: 15px;
+    padding: 40px 20px; /* قللنا الحواف شوي عشان تناسب شاشة الجوال */
+    max-width: 800px;
     text-align: center;
-    font-size: 1.5em;
-    letter-spacing: 5px; /* تباعد بين نقاط كلمة السر */
-    transition: 0.3s;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.9);
+    margin: auto; /* هاي بتخليها بالوسط تماماً */
+    margin-top: 40px; /* مسافة من فوق عشان ما تلزق ببداية الشاشة */
+    margin-bottom: 40px; /* مسافة من تحت */
 }
-
-/* تأثير عند الضغط على حقل الإدخال */
-input[type="password"]:focus {
-    outline: none;
-    border-color: #f0c966;
-    box-shadow: 0 0 10px rgba(240, 201, 102, 0.4);
-}
-
 /* زر الدخول */
 button {
     background: linear-gradient(135deg, #c5a059, #f0c966); /* تدرج ذهبي */
